@@ -4,6 +4,7 @@ import PartnerLogos from "@/app/components/PartnerLogos";
 import TrendingDestinations from "@/app/components/TrendingDestinations";
 import MissionVision from "@/app/components/MissionVision";
 import Hotels from "@/app/components/Hotels";
+import CTA from "@/app/components/CTA";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <TrendingDestinations />
       <MissionVision />
       <Hotels />
+      <CTA />
     </div>
   );
 }
