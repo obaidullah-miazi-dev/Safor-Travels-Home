@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import SearchWidget from "@/app/components/SearchWidget";
 
 export default function Hero() {
   return (
@@ -36,6 +37,8 @@ export default function Hero() {
             and seamless visa assistance.
           </p>
         </div>
+
+        <SearchWidget />
       </div>
     </div>
   );
