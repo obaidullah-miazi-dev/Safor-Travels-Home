@@ -11,12 +11,12 @@ export default function Navbar() {
       <div className="max-w-11/12 mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <div className="flex items-center gap-2">
-            <div className="text-primary p-2 bg-primary/10 rounded-lg"></div>
+            
             <span className="text-2xl font-extrabold tracking-tight text-slate-900 dark:text-white">
               <Image
                 className="w-26"
                 src={Logo}
-                width={60}
+                width={150}
                 height={60}
                 alt="Safor Logo"
               />
