@@ -24,7 +24,7 @@ export default function HotelModal({ hotel, onClose }) {
             <div className="bg-white dark:bg-slate-800 rounded-3xl shadow-2xl w-full max-w-4xl overflow-hidden relative flex flex-col md:flex-row animate-in zoom-in-95 duration-200">
                 <button
                     onClick={onClose}
-                    className="absolute top-4 right-4 z-10 bg-white/20 hover:bg-white/40 backdrop-blur-md p-2 rounded-full text-white transition-colors"
+                    className="absolute top-4 right-4 z-10 bg-white/20 hover:bg-white/40 backdrop-blur-md p-2 rounded-full dark:text-white shadow-lg cursor-pointer transition-colors"
                 >
                     <X className="w-5 h-5" />
                 </button>

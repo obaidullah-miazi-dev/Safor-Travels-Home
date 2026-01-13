@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import React, { useState } from "react";
 import Logo from "@/assets/Logo.png";
 import Image from "next/image";
@@ -11,7 +11,6 @@ export default function Navbar() {
       <div className="max-w-11/12 mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <div className="flex items-center gap-2">
-            
             <span className="text-2xl font-extrabold tracking-tight text-slate-900 dark:text-white">
               <Image
                 className="w-26"
@@ -55,10 +54,10 @@ export default function Navbar() {
             </a>
           </div>
           <div className="hidden md:flex items-center gap-4">
-            <button className="bg-primary hover:bg-blue-600 hover:text-white border-2 border-black/0 shadow-sm px-5 py-2 rounded-md  text-sm font-bold transition-all">
+            <button className="bg-primary hover:bg-blue-600 hover:text-white border-2 border-black/0 shadow-sm px-5 py-2 rounded-md text-white  text-sm font-bold transition-all">
               Login
             </button>
-            <button className="bg-primary hover:bg-blue-600 hover:text-white border-2 border-blue-600 px-5 py-2 rounded-md  text-sm font-bold transition-all">
+            <button className=" hover:bg-blue-600 hover:text-white border-2 border-blue-600 px-5 py-2 rounded-md  text-sm font-bold transition-all">
               Sign Up
             </button>
           </div>
