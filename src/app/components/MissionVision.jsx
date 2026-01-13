@@ -4,7 +4,7 @@ import { Plane, Check, ArrowRight } from "lucide-react";
 
 export default function MissionVision() {
   return (
-    <section className="py-30 bg-white dark:bg-slate-900 overflow-hidden">
+    <section className="py-36 bg-white dark:bg-slate-900 overflow-hidden">
       <div className="max-w-9/12 mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-36 items-center">
           {/* Text Content */}

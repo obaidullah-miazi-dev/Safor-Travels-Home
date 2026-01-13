@@ -4,7 +4,7 @@ import SearchWidget from "@/app/components/SearchWidget";
 
 export default function Hero() {
   return (
-    <div className="relative min-h-[85vh] w-full flex flex-col justify-center items-center overflow-hidden">
+    <div className="relative py-36 min-h-[85vh] w-full flex flex-col justify-center items-center overflow-hidden">
       {/* Background Image is here */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/40 to-black/30 z-10"></div>

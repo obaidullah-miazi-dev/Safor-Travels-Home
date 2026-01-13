@@ -45,8 +45,8 @@ const destinations = [
 
 export default function TrendingDestinations() {
     return (
-        <section className="py-24 max-w-11/12 mx-auto px-4 sm:px-6 lg:px-8" id="packages">
-            <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
+        <section className="py-36 max-w-11/12 mx-auto px-4 sm:px-6 lg:px-8" id="packages">
+            <div className="flex flex-col md:flex-row justify-between items-start mb-12 gap-4">
                 <div>
                     <h2 className="text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-2">Trending Destinations</h2>
                     <p className="text-slate-500 dark:text-slate-400 text-lg">Curated tours for your next adventure.</p>
