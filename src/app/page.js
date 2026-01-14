@@ -3,6 +3,7 @@ import Hero from "@/app/components/Hero";
 import PartnerLogos from "@/app/components/PartnerLogos";
 import TrendingDestinations from "@/app/components/TrendingDestinations";
 import MissionVision from "@/app/components/MissionVision";
+import HajjUmrah from "@/app/components/HajjUmrah";
 import Hotels from "@/app/components/Hotels";
 import Testimonials from "@/app/components/Testimonials";
 import ContactUs from "@/app/components/ContactUs";
@@ -15,6 +16,7 @@ export default function Home() {
       <PartnerLogos />
       <TrendingDestinations />
       <MissionVision />
+      <HajjUmrah />
       <Hotels />
       <Testimonials />
       <CTA />

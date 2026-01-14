@@ -6,8 +6,8 @@ import { Mail, MapPin, Phone, Send } from "lucide-react";
 export default function ContactUs() {
   return (
     <section className="py-24" id="contact">
-      <div className="container mx-auto px-4">
-        <div className="max-w-6xl mx-auto">
+      <div className="container mx-auto">
+        <div className="max-w-11/12 mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
             {/* Contact Info */}
             <motion.div
