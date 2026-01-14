@@ -22,11 +22,11 @@ export default function HajjUmrah() {
 
     useGSAP(
         () => {
-            // Header Animation
             gsap.from(headerRef.current, {
                 scrollTrigger: {
                     trigger: headerRef.current,
                     start: "top 80%",
+                    toggleActions: "play none none reset",
                 },
                 y: 20,
                 opacity: 0,
@@ -34,12 +34,12 @@ export default function HajjUmrah() {
                 ease: "power3.out",
             });
 
-            // Cards Animation
             const cards = cardsRef.current.children;
             gsap.from(cards, {
                 scrollTrigger: {
                     trigger: cardsRef.current,
                     start: "top 80%",
+                    toggleActions: "play none none reset",
                 },
                 y: 20,
                 opacity: 0,

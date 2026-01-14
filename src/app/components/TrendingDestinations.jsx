@@ -64,10 +64,11 @@ export default function TrendingDestinations() {
         scrollTrigger: {
           trigger: headerRef.current,
           start: "top 80%",
+          toggleActions: "play none none reset",
         },
         y: 20,
         opacity: 0,
-        duration: 0.6,
+        duration: 0.8,
         ease: "power3.out",
       });
 
@@ -76,11 +77,12 @@ export default function TrendingDestinations() {
         scrollTrigger: {
           trigger: gridRef.current,
           start: "top 80%",
+          toggleActions: "play none none reset",
         },
         y: 30,
         opacity: 0,
-        duration: 0.6,
-        stagger: 0.1,
+        duration: 0.8,
+        stagger: 0.3,
         ease: "power3.out",
       });
     },

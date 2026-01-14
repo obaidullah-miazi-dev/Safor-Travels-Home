@@ -15,11 +15,11 @@ export default function MissionVision() {
 
   useGSAP(
     () => {
-      // Text Animation
       gsap.from(textRef.current, {
         scrollTrigger: {
           trigger: textRef.current,
           start: "top 80%",
+          toggleActions: "play none none reset",
         },
         x: -50,
         opacity: 0,
@@ -27,11 +27,12 @@ export default function MissionVision() {
         ease: "power3.out",
       });
 
-      // Image Animation
+      
       gsap.from(imageRef.current, {
         scrollTrigger: {
           trigger: imageRef.current,
           start: "top 80%",
+          toggleActions: "play none none reset",
         },
         x: 50,
         opacity: 0,

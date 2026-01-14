@@ -25,11 +25,11 @@ export default function VisaAssistance() {
 
   useGSAP(
     () => {
-      // Header Animation
       gsap.from(headerRef.current, {
         scrollTrigger: {
           trigger: headerRef.current,
           start: "top 80%",
+          toggleActions: "play none none reset",
         },
         y: 20,
         opacity: 0,
@@ -37,12 +37,12 @@ export default function VisaAssistance() {
         ease: "power3.out",
       });
 
-      // Services Animation
       const services = servicesRef.current.children;
       gsap.from(services, {
         scrollTrigger: {
           trigger: servicesRef.current,
           start: "top 80%",
+          toggleActions: "play none none reset",
         },
         y: 20,
         opacity: 0,
@@ -51,12 +51,12 @@ export default function VisaAssistance() {
         ease: "power3.out",
       });
 
-      // Process Steps Animation
       const steps = processRef.current.children;
       gsap.from(steps, {
         scrollTrigger: {
           trigger: processRef.current,
           start: "top 80%",
+          toggleActions: "play none none reset",
         },
         x: -20,
         opacity: 0,

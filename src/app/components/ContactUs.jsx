@@ -18,6 +18,7 @@ export default function ContactUs() {
         scrollTrigger: {
           trigger: infoRef.current,
           start: "top 80%",
+          toggleActions: "play none none reset",
         },
         x: -50,
         opacity: 0,
@@ -29,6 +30,7 @@ export default function ContactUs() {
         scrollTrigger: {
           trigger: formRef.current,
           start: "top 80%",
+          toggleActions: "play none none reset",
         },
         x: 50,
         opacity: 0,

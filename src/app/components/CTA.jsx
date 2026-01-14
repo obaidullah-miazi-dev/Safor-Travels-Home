@@ -17,6 +17,7 @@ export default function CTA() {
         scrollTrigger: {
           trigger: contentRef.current,
           start: "top 80%",
+          toggleActions: "play none none reset",
         },
         y: 30,
         opacity: 0,

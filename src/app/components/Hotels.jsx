@@ -59,11 +59,11 @@ export default function Hotels() {
 
     useGSAP(
         () => {
-            // Header Animation
             gsap.from(headerRef.current, {
                 scrollTrigger: {
                     trigger: headerRef.current,
                     start: "top 80%",
+                    toggleActions: "play none none reset",
                 },
                 y: 20,
                 opacity: 0,
@@ -71,12 +71,12 @@ export default function Hotels() {
                 ease: "power3.out",
             });
 
-            // Grid Animation
             const cards = gridRef.current.children;
             gsap.from(cards, {
                 scrollTrigger: {
                     trigger: gridRef.current,
                     start: "top 80%",
+                    toggleActions: "play none none reset",
                 },
                 y: 30,
                 opacity: 0,
