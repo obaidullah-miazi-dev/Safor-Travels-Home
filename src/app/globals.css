@@ -14,9 +14,9 @@
 }
 
 .dark {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #0a0a0a;
+  --foreground: #ededed;
+}
 
 body {
   background: var(--background);
@@ -24,7 +24,12 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-::view-transition-old(root), ::view-transition-new(root) {
-    animation: none;
-    mix-blend-mode: normal;
+* {
+  scroll-behavior: smooth;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
 }

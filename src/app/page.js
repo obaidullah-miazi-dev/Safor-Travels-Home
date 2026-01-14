@@ -5,6 +5,7 @@ import TrendingDestinations from "@/app/components/TrendingDestinations";
 import MissionVision from "@/app/components/MissionVision";
 import Hotels from "@/app/components/Hotels";
 import Testimonials from "@/app/components/Testimonials";
+import ContactUs from "@/app/components/ContactUs";
 import CTA from "@/app/components/CTA";
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
       <Hotels />
       <Testimonials />
       <CTA />
+      <ContactUs />
     </div>
   );
 }

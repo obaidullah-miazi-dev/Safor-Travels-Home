@@ -25,7 +25,7 @@ export default function Navbar() {
             <a href="#packages">Packages</a>
             <a href="#hotels">Hotels</a>
             <a href="#">Visa Assistance</a>
-            <a href="#">Contact</a>
+            <a href="#contact">Contact</a>
           </div>
           <div className="hidden md:flex items-center gap-4">
             <ThemeToggle />
