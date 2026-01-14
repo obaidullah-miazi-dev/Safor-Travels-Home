@@ -9,7 +9,7 @@ export default function Navbar() {
 
   return (
     <nav className="sticky top-0 z-50 w-full  backdrop-blur-md">
-      <div className="max-w-11/12 mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-11/12 px-4 sm:px-6 lg:px-8 mx-auto">
         <div className="flex justify-between items-center h-20">
           <a href="#" className="flex items-center gap-2">
             <Image

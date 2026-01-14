@@ -44,8 +44,7 @@ export default function DestinationCard({
         <h3 className="text-white text-2xl font-bold mb-2">{title}</h3>
         <div className="flex items-center justify-between mt-2">
           <div className="text-white/80 text-sm flex items-center gap-1">
-            <MapPin className="w-4 h-4" />{" "}
-            {location}
+            <MapPin className="w-4 h-4" /> {location}
           </div>
           <div className="text-white font-bold text-xl">
             ${price}{" "}

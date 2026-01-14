@@ -47,7 +47,9 @@ export default function Testimonials() {
         <p className="text-center dark:text-gray-400 mb-12 max-w-2xl mx-auto">
           Discover why thousands of adventurers choose Safor for their journeys.
         </p>
-        <AnimatedTestimonials testimonials={testimonials} autoplay={true} />
+        <div className="max-w-8/12 mx-auto">
+          <AnimatedTestimonials testimonials={testimonials} autoplay={true} />
+        </div>
       </div>
     </section>
   );

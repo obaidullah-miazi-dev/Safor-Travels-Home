@@ -11,7 +11,13 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2 mb-6">
-              <Image src={Logo} alt="Safor Travels Logo" width={150} height={50} className="h-10 w-auto object-contain" />
+              <Image
+                src={Logo}
+                alt="Safor Travels Logo"
+                width={150}
+                height={50}
+                className="h-10 w-auto object-contain"
+              />
             </div>
             <p className="text-slate-500 dark:text-slate-400 mb-6">
               Your trusted partner for exploring Bangladesh and the world. We
@@ -144,8 +150,7 @@ export default function Footer() {
           </p>
           <div className="flex gap-6 text-slate-400 text-sm">
             <span className="flex items-center gap-1">
-              <MapPin className="w-4 h-4" />{" "}
-              Dhaka, Bangladesh
+              <MapPin className="w-4 h-4" /> Dhaka, Bangladesh
             </span>
           </div>
         </div>

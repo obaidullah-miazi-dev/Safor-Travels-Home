@@ -129,7 +129,7 @@ export default function VisaAssistance() {
 
   return (
     <section className="py-24" id="visaAssistance" ref={container}>
-      <div className="max-w-11/12 mx-auto px-4">
+      <div className="max-w-11/12 mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div ref={headerRef} className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-4xl md:text-5xl font-serif font-bold  mb-4">

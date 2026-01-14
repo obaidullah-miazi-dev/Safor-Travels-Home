@@ -44,8 +44,8 @@ export default function ContactUs() {
 
   return (
     <section className="py-24" id="contact" ref={container}>
-      <div className="container mx-auto">
-        <div className="max-w-11/12 mx-auto">
+      {/* <div className="max-w-11/12 mx-auto"> */}
+        <div className="max-w-11/12 px-4 sm:px-6 lg:px-8 mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
             {/* Contact Info */}
             <div ref={infoRef} className="flex flex-col justify-center">
@@ -168,7 +168,7 @@ export default function ContactUs() {
             </div>
           </div>
         </div>
-      </div>
+      {/* </div> */}
     </section>
   );
 }

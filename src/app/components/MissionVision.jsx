@@ -57,7 +57,7 @@ export default function MissionVision() {
               <div className="absolute -top-6 -left-6 bg-accent text-white p-4 rounded-xl shadow-lg hidden md:block">
                 <Plane className="w-8 h-8" />
               </div>
-              <h2 className="text-3xl md:text-5xl font-serif font-extrabold  mb-6">
+              <h2 className="text-2xl md:text-5xl font-serif font-extrabold  mb-6">
                 Redefining Travel Experiences Since 2015
               </h2>
               <p className="text-slate-400 mb-6 leading-relaxed">
@@ -108,7 +108,6 @@ export default function MissionVision() {
                 alt="Traveler looking at map in a city"
                 className="object-cover"
                 fill
-                sizes="(max-width: 768px) 100vw, 50vw"
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzt-8tAB7okr4aGng2JR62Q7UvhurkmD2mbWSEOjXlDQQr0vCco6zlf-H-qkjwcDP01WoNov6ElzSTArA1x4RDZLVDXUzFTT51M8BojYWLE_NtTqhBrTi87v0ad94MdI0KgPSCD2DHJ8IUMZ-nVOQ3VM57cZRig7NMyPAv6DHVaja0AetUYE8nV4K_P6BJjQ2Sw7ZjqCsJHI3wq3fLXTB0X_1RVrpUhWZzf-fBjxJ9A0xfLhu_iAmn3O_XiuQPjbfHNtZuktDigsdA"
               />
             </div>
@@ -117,12 +116,11 @@ export default function MissionVision() {
                 alt="Adventurous jeep tour in the desert"
                 className="object-cover"
                 fill
-                sizes="(max-width: 768px) 100vw, 50vw"
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwplPZ5ZapcosIXrtqPnLMxFLLF3-d8juPGNWHXn16iAqCm8Y35D-qWLls_y_-7NmudTXIqYfo9XA80qJeelt0dCNLexGOxp-H17EBHaF9MqQoTAo_AuhpdAi12TTBsPyzWAfXpUMiWyIoWd9Ss1oqTerdRwSvrud5x6Eu9Abs1DTOKjPQHL8zxe0lRmLnz1NwydNsRbhxQ1x_RwXMa7tmoNqFy_ZVG2O05DmA1DE1x_UpxFksv8vUCluh0WOMzbDxK8IW_oYXm_jX"
               />
             </div>
             {/* Decorative element */}
-            <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-accent/20 rounded-full blur-2xl z-0"></div>
+            {/* <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-accent/20 rounded-full blur-2xl z-0"></div> */}
           </div>
         </div>
       </div>
