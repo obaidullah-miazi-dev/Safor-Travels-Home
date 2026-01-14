@@ -161,8 +161,8 @@ export default function HajjUmrah() {
               <p className="text-slate-500 mb-6">
                 Speak with our specialized Hajj & Umrah consultants today.
               </p>
-              <button className="bg-emerald-700 hover:bg-emerald-800 text-white px-8 py-3 rounded-full font-medium transition-colors shadow-lg hover:shadow-emerald-700/20 text-sm">
-                Plan Your <br /> Umrah
+              <button className="bg-emerald-700 hover:bg-emerald-800 text-white px-8 py-3 rounded-full font-medium transition-colors shadow-lg hover:shadow-emerald-700/20 text-sm md:text-md">
+                Plan Your Umrah
               </button>
             </div>
           </div>
