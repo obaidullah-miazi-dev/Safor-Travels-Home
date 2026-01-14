@@ -27,7 +27,7 @@ export default function Hero() {
             Explore the Unseen
           </span>
 
-          <h1 className="text-5xl md:text-7xl font-black text-white leading-tight mb-6 tracking-tight drop-shadow-xl">
+          <h1 className="text-5xl md:text-7xl font-extrabold text-white leading-tight mb-6 tracking-tight drop-shadow-xl font-serif">
             Discover the{" "}
             <span className="text-transparent bg-clip-text bg-linear-to-l from-teal-400 to-white">
               Beauty

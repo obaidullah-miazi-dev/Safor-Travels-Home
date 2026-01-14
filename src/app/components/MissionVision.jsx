@@ -13,7 +13,7 @@ export default function MissionVision() {
               <div className="absolute -top-6 -left-6 bg-accent text-white p-4 rounded-xl shadow-lg hidden md:block">
                 <Plane className="w-8 h-8" />
               </div>
-              <h2 className="text-3xl md:text-4xl font-extrabold  mb-6">
+              <h2 className="text-3xl md:text-5xl font-serif font-extrabold  mb-6">
                 Redefining Travel Experiences Since 2015
               </h2>
               <p className="text-slate-400 mb-6 leading-relaxed">

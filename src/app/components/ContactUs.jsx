@@ -17,7 +17,7 @@ export default function ContactUs() {
               transition={{ duration: 0.6 }}
               className="flex flex-col justify-center"
             >
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6">
                 Get in Touch
               </h2>
               <p className="text-lg text-gray-600 dark:text-gray-400 mb-12">

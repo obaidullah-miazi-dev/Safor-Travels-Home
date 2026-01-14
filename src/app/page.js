@@ -5,6 +5,7 @@ import TrendingDestinations from "@/app/components/TrendingDestinations";
 import MissionVision from "@/app/components/MissionVision";
 import HajjUmrah from "@/app/components/HajjUmrah";
 import Hotels from "@/app/components/Hotels";
+import VisaAssistance from "@/app/components/VisaAssistance";
 import Testimonials from "@/app/components/Testimonials";
 import ContactUs from "@/app/components/ContactUs";
 import CTA from "@/app/components/CTA";
@@ -18,6 +19,7 @@ export default function Home() {
       <MissionVision />
       <HajjUmrah />
       <Hotels />
+      <VisaAssistance />
       <Testimonials />
       <CTA />
       <ContactUs />

@@ -40,8 +40,8 @@ export default function Testimonials() {
   ];
   return (
     <section className="py-20 ">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-5xl font-bold text-center mb-4">
+      <div className="mx-auto px-4">
+        <h2 className="text-3xl md:text-5xl font-serif font-bold text-center mb-4">
           What Our Travelers Say
         </h2>
         <p className="text-center dark:text-gray-400 mb-12 max-w-2xl mx-auto">

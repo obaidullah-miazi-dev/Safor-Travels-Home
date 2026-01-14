@@ -36,7 +36,7 @@ export default function HajjUmrah() {
 
     return (
         <section className="py-36">
-            <div className="container mx-auto px-4">
+            <div className="max-w-11/12 mx-auto px-4">
                 {/* Section Header */}
                 <div className="text-center max-w-3xl mx-auto mb-16">
                     <motion.div
@@ -90,7 +90,7 @@ export default function HajjUmrah() {
                         <div>
                             <div className="flex items-center gap-3 mb-6">
                                 <HeartHandshake className="w-8 h-8 text-emerald-700 dark:text-emerald-400" />
-                                <h3 className="text-2xl md:text-3xl font-bold ">
+                                <h3 className="text-2xl md:text-3xl font-serif font-bold ">
                                     Your Trusted Companion
                                 </h3>
                             </div>
