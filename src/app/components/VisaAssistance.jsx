@@ -1,6 +1,5 @@
 "use client";
-import React from "react";
-import { motion } from "motion/react";
+import React, { useRef } from "react";
 import {
   FileText,
   Globe,
@@ -11,8 +10,76 @@ import {
   BellRing,
   ShieldCheck,
 } from "lucide-react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function VisaAssistance() {
+  const container = useRef();
+  const headerRef = useRef();
+  const servicesRef = useRef();
+  const processRef = useRef();
+  const trustRef = useRef();
+
+  useGSAP(
+    () => {
+      // Header Animation
+      gsap.from(headerRef.current, {
+        scrollTrigger: {
+          trigger: headerRef.current,
+          start: "top 80%",
+        },
+        y: 20,
+        opacity: 0,
+        duration: 0.6,
+        ease: "power3.out",
+      });
+
+      // Services Animation
+      const services = servicesRef.current.children;
+      gsap.from(services, {
+        scrollTrigger: {
+          trigger: servicesRef.current,
+          start: "top 80%",
+        },
+        y: 20,
+        opacity: 0,
+        duration: 0.5,
+        stagger: 0.1,
+        ease: "power3.out",
+      });
+
+      // Process Steps Animation
+      const steps = processRef.current.children;
+      gsap.from(steps, {
+        scrollTrigger: {
+          trigger: processRef.current,
+          start: "top 80%",
+        },
+        x: -20,
+        opacity: 0,
+        duration: 0.5,
+        stagger: 0.1,
+        ease: "power3.out",
+      });
+
+      // Trust Block Animation
+      gsap.from(trustRef.current, {
+        scrollTrigger: {
+          trigger: trustRef.current,
+          start: "top 80%",
+        },
+        x: 20,
+        opacity: 0,
+        duration: 0.6,
+        ease: "power3.out",
+      });
+    },
+    { scope: container }
+  );
+
   const services = [
     {
       icon: <Globe className="w-6 h-6 text-blue-600 dark:text-blue-400" />,
@@ -61,34 +128,26 @@ export default function VisaAssistance() {
   ];
 
   return (
-    <section className="py-24">
+    <section className="py-24" id="visaAssistance" ref={container}>
       <div className="max-w-11/12 mx-auto px-4">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="text-4xl md:text-5xl font-serif font-bold  mb-4">
-              Visa Assistance
-            </h2>
-            <p className="text-lg text-slate-600 dark:text-slate-400">
-              Expert guidance to simplify your visa application process.
-            </p>
-          </motion.div>
+        <div ref={headerRef} className="text-center max-w-3xl mx-auto mb-16">
+          <h2 className="text-4xl md:text-5xl font-serif font-bold  mb-4">
+            Visa Assistance
+          </h2>
+          <p className="text-lg text-slate-600 dark:text-slate-400">
+            Expert guidance to simplify your visa application process.
+          </p>
         </div>
 
         {/* Supported Visa Types */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
+        <div
+          ref={servicesRef}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20"
+        >
           {services.map((service, index) => (
-            <motion.div
+            <div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
               className="p-6 rounded-xl shadow-sm border border-slate-100 hover:border-blue-200 dark:hover:border-blue-800 transition-colors"
             >
               <div className="mb-4 bg-blue-50  w-12 h-12 rounded-lg flex items-center justify-center">
@@ -98,7 +157,7 @@ export default function VisaAssistance() {
               <p className="text-slate-600 dark:text-slate-400 text-sm">
                 {service.description}
               </p>
-            </motion.div>
+            </div>
           ))}
         </div>
 
@@ -106,7 +165,10 @@ export default function VisaAssistance() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           <div className="lg:col-span-7">
             <h3 className="text-2xl font-bold mb-8">Simple 4-Step Process</h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div
+              ref={processRef}
+              className="grid grid-cols-1 sm:grid-cols-2 gap-6"
+            >
               {steps.map((step, index) => (
                 <div
                   key={index}
@@ -127,7 +189,10 @@ export default function VisaAssistance() {
           </div>
 
           <div className="lg:col-span-5">
-            <div className="p-8 rounded-2xl shadow-lg border border-slate-100">
+            <div
+              ref={trustRef}
+              className="p-8 rounded-2xl shadow-lg border border-slate-100"
+            >
               <div className="flex items-center gap-3 mb-6">
                 <ShieldCheck className="w-8 h-8 text-green-600 dark:text-green-500" />
                 <h3 className="text-xl font-bold ">Why Choose Us?</h3>

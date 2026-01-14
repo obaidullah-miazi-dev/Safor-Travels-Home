@@ -1,22 +1,52 @@
 "use client";
-import React from "react";
-import { motion } from "motion/react";
+import React, { useRef } from "react";
 import { Mail, MapPin, Phone, Send } from "lucide-react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function ContactUs() {
+  const container = useRef();
+  const infoRef = useRef();
+  const formRef = useRef();
+
+  useGSAP(
+    () => {
+      gsap.from(infoRef.current, {
+        scrollTrigger: {
+          trigger: infoRef.current,
+          start: "top 80%",
+        },
+        x: -50,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+      });
+
+      gsap.from(formRef.current, {
+        scrollTrigger: {
+          trigger: formRef.current,
+          start: "top 80%",
+        },
+        x: 50,
+        opacity: 0,
+        duration: 0.8,
+        delay: 0.2,
+        ease: "power3.out",
+      });
+    },
+    { scope: container }
+  );
+
   return (
-    <section className="py-24" id="contact">
+    <section className="py-24" id="contact" ref={container}>
       <div className="container mx-auto">
         <div className="max-w-11/12 mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
             {/* Contact Info */}
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="flex flex-col justify-center"
-            >
+            <div ref={infoRef} className="flex flex-col justify-center">
               <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6">
                 Get in Touch
               </h2>
@@ -68,14 +98,11 @@ export default function ContactUs() {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
 
             {/* Contact Form */}
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+            <div
+              ref={formRef}
               className=" p-8 md:p-10 rounded-3xl shadow-xl border border-gray-300"
             >
               <form className="space-y-6">
@@ -136,7 +163,7 @@ export default function ContactUs() {
                   <Send className="w-5 h-5 transition-transform group-hover:translate-x-1" />
                 </button>
               </form>
-            </motion.div>
+            </div>
           </div>
         </div>
       </div>

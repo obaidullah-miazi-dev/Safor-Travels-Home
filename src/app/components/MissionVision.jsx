@@ -1,14 +1,57 @@
-import React from "react";
+"use client";
+import React, { useRef } from "react";
 import Image from "next/image";
 import { Plane, Check, ArrowRight } from "lucide-react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function MissionVision() {
+  const container = useRef();
+  const textRef = useRef();
+  const imageRef = useRef();
+
+  useGSAP(
+    () => {
+      // Text Animation
+      gsap.from(textRef.current, {
+        scrollTrigger: {
+          trigger: textRef.current,
+          start: "top 80%",
+        },
+        x: -50,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+      });
+
+      // Image Animation
+      gsap.from(imageRef.current, {
+        scrollTrigger: {
+          trigger: imageRef.current,
+          start: "top 80%",
+        },
+        x: 50,
+        opacity: 0,
+        duration: 0.8,
+        delay: 0.2,
+        ease: "power3.out",
+      });
+    },
+    { scope: container }
+  );
+
   return (
-    <section className="py-36 overflow-hidden">
+    <section className="py-36 overflow-hidden" ref={container}>
       <div className="max-w-9/12 mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-36 items-center">
           {/* Text Content */}
-          <div className="relative z-10 lg:pr-10 order-2 lg:order-1">
+          <div
+            ref={textRef}
+            className="relative z-10 lg:pr-10 order-2 lg:order-1"
+          >
             <div className="bg-background-light  p-8 md:p-12 rounded-3xl shadow-xl border border-white/50 dark:border-slate-700 relative">
               <div className="absolute -top-6 -left-6 bg-accent text-white p-4 rounded-xl shadow-lg hidden md:block">
                 <Plane className="w-8 h-8" />
@@ -19,8 +62,9 @@ export default function MissionVision() {
               <p className="text-slate-400 mb-6 leading-relaxed">
                 At Safor Travels, our mission is simple: to make world-class
                 travel accessible to everyone. We believe travel is more than
-                just moving from place to place—it&apos;s about the joy of discovery,
-                the warmth of new cultures, and the memories you create.
+                just moving from place to place—it&apos;s about the joy of
+                discovery, the warmth of new cultures, and the memories you
+                create.
               </p>
               <ul className="space-y-4 mb-8">
                 <li className="flex items-start gap-3">
@@ -49,13 +93,15 @@ export default function MissionVision() {
                 </li>
               </ul>
               <button className="text-primary font-bold hover:text-blue-700 flex items-center gap-2">
-                Learn more about us{" "}
-                <ArrowRight className="w-5 h-5" />
+                Learn more about us <ArrowRight className="w-5 h-5" />
               </button>
             </div>
           </div>
           {/* Image Collage */}
-          <div className="relative order-1 lg:order-2 h-125 w-full">
+          <div
+            ref={imageRef}
+            className="relative order-1 lg:order-2 h-125 w-full"
+          >
             <div className="absolute top-0 right-0 w-3/4 h-3/4 bg-slate-200 rounded-3xl overflow-hidden shadow-lg rotate-3 z-0">
               <Image
                 alt="Traveler looking at map in a city"

@@ -1,9 +1,35 @@
+"use client";
 import Image from "next/image";
-import React from "react";
+import React, { useRef } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function CTA() {
+  const container = useRef();
+  const contentRef = useRef();
+
+  useGSAP(
+    () => {
+      gsap.from(contentRef.current.children, {
+        scrollTrigger: {
+          trigger: contentRef.current,
+          start: "top 80%",
+        },
+        y: 30,
+        opacity: 0,
+        duration: 0.8,
+        stagger: 0.2,
+        ease: "power3.out",
+      });
+    },
+    { scope: container }
+  );
+
   return (
-    <section className="relative py-36 overflow-hidden">
+    <section className="relative py-36 overflow-hidden" ref={container}>
       <div className="absolute inset-0 z-0">
         <Image
           alt="Wide panoramic view of a tropical beach"
@@ -14,7 +40,10 @@ export default function CTA() {
         />
         <div className="absolute inset-0 bg-primary/90 mix-blend-multiply"></div>
       </div>
-      <div className="relative z-10 max-w-4xl mx-auto text-center px-4">
+      <div
+        ref={contentRef}
+        className="relative z-10 max-w-4xl mx-auto text-center px-4"
+      >
         <h2 className="text-4xl md:text-5xl font-black font-serif text-white mb-6">
           Ready to Plan Your Custom Trip?
         </h2>
