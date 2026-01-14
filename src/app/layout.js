@@ -29,6 +29,22 @@ export default function RootLayout({ children }) {
       <body
         className={`${epilogue.variable} antialiased dark:bg-black`}
       >
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                try {
+                  var theme = localStorage.getItem('theme');
+                  if (theme === 'dark') {
+                    document.documentElement.classList.add('dark');
+                  } else {
+                    document.documentElement.classList.remove('dark');
+                  }
+                } catch (e) {}
+              })();
+            `,
+          }}
+        />
         <Navbar />
         {children}
         <Footer />

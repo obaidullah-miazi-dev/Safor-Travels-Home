@@ -18,7 +18,7 @@ export default function HotelCard({ image, alt, price, name, rating, description
     };
 
     return (
-        <div className="bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow border border-slate-100 dark:border-slate-700 group">
+        <div className=" rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow border border-slate-100 dark:border-slate-200 group">
             <div className="relative h-64 overflow-hidden">
                 <Image
                     alt={alt}
@@ -28,13 +28,13 @@ export default function HotelCard({ image, alt, price, name, rating, description
                     src={image}
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="absolute top-4 right-4 bg-white/90 dark:bg-slate-800/90 backdrop-blur px-2 py-1 rounded text-xs font-bold shadow-sm z-10">
+                <div className="absolute top-4 right-4 text-white backdrop-blur px-2 py-1 rounded text-xs font-bold shadow-sm z-10">
                     ${price}/night
                 </div>
             </div>
             <div className="p-6">
                 <div className="flex justify-between items-start mb-2">
-                    <h3 className="text-xl font-bold text-slate-900 dark:text-white">{name}</h3>
+                    <h3 className="text-xl font-bold">{name}</h3>
                     <div className="flex text-yellow-400 text-xs">
                         {renderStars(rating)}
                     </div>
@@ -42,7 +42,7 @@ export default function HotelCard({ image, alt, price, name, rating, description
                 <p className="text-slate-500 dark:text-slate-400 text-sm mb-4 line-clamp-2">{description}</p>
                 <button
                     onClick={onViewDetails}
-                    className="w-full py-3 rounded-lg border border-primary text-primary font-bold hover:bg-primary hover:text-white transition-all duration-300 text-sm shadow-sm hover:shadow-md active:scale-95"
+                    className="w-full py-3 rounded-lg border border-primary text-primary font-bold hover:bg-primary hover:text-white transition-all duration-300 text-sm shadow-sm hover:shadow-md active:scale-95 cursor-pointer"
                 >
                     View Details
                 </button>
