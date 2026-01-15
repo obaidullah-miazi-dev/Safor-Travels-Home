@@ -65,10 +65,10 @@ export default function Navbar() {
             <a href="#hotels" onClick={() => setIsOpen(false)}>
               Hotels
             </a>
-            <a href="#" onClick={() => setIsOpen(false)}>
+            <a href="#visaAssistance" onClick={() => setIsOpen(false)}>
               Visa Assistance
             </a>
-            <a href="#" onClick={() => setIsOpen(false)}>
+            <a href="#contact" onClick={() => setIsOpen(false)}>
               Contact
             </a>
             <div className="flex flex-col gap-3 pt-4 border-t border-slate-100 dark:border-slate-800">
